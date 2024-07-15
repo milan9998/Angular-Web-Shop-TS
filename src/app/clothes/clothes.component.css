@@ -1,0 +1,104 @@
+.custom-list-item {
+  height: 75px; /* Postavljanje visine */
+  padding: 10px; /* Dodavanje prostora unutar list item-a */
+  /* Dodatni stilovi po potrebi */
+}
+
+.custom-list {
+  max-width: 600px;
+  height: 100px; /* Postavljanje maksimalne širine liste */
+  /* Dodatni stilovi po potrebi */
+} 
+
+.custom-form {
+  padding: 15px;
+}
+
+.example-card {
+  width: 400px;
+  margin-bottom: 8px;
+}
+.example-card img {
+  width: 80%; /* Postavljanje širine slike na 100% */
+  height: auto; /* Automatsko određivanje visine slike kako bi se očuvali omjeri */
+}
+.prvasekcija{
+  margin-left: 20px;
+  margin-top: 40px;
+  
+}
+.drugasekcija {
+  margin-top: 50px;
+  margin-left: 5%;
+  margin-right: 5%;
+  color: black;
+  
+}
+
+.mat-table-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1400px;
+  
+  margin: 0 auto;
+}
+
+.mat-card {
+  flex: 0 1 calc(33.3333% - 20px);
+  max-width: calc(33.3333% - 20px);
+  margin-bottom: 20px;
+}
+
+
+
+.mat-paginator {
+  margin-top: 20px;
+  width: 100%;
+  justify-content: center;
+}
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.mat-cell,
+.mat-header-cell {
+  padding: 20px;
+  text-align: center;
+}
+
+
+.example-radio-group {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+  align-items: flex-start;
+  color: black;
+}
+
+.example-radio-button {
+  margin: 5px;
+  color: black;
+}
+
+.img-size {
+  padding: 15px;
+  width: 240px;
+  height: 280px;
+}
+
+.custom-icon-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  color: yellow;
+}
+
+.custom-icon-button:hover {
+  background-color: rgba(44, 63, 60, 0.603);
+}
+.example-radio-button .mat-radio-label-content {
+  color: black;
+}

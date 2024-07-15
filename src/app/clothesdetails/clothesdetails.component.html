@@ -1,0 +1,61 @@
+<section class="detaljiOdece" fxLayout="row" fxLayoutAlign="center" fxLayoutGap="1px">
+    
+      <mat-card class="kartica" *ngIf="item" fxLayout="row" >
+
+        <div class="slika" fxLayoutAlign="start" fxLayout="column">
+            <img [src]="'assets/images/' + item.picture">
+            <br>
+            <p class="item-size">
+              Velicina:  {{ item.size }}</p>
+            <br>
+            <p class="item-size"> Rating (1-5): {{item.rating}}</p>
+        </div>
+
+        <div class="info-proizvod" fxLayout="column">
+
+          <mat-card-header fxLayout="row" fxLayoutAlign="start">
+            <div mat-card-avatar></div>
+            <mat-card-title>
+              {{ item.manufacturer }}
+              <br>
+              <div class="item-type">
+                {{ item.type }} - {{ item.name }}
+              </div>
+            </mat-card-title>
+            <mat-card-subtitle></mat-card-subtitle>
+          </mat-card-header>
+          
+          <mat-card-content class="opic-proizvoda">
+            
+          <div class="info-proizvod2">
+            <p class="opis-proizvoda">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,<br>
+               totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+            </p>
+            <br>
+            <p class="cena">
+              {{ item.price }} RSD
+            </p>
+
+          </div>
+            
+          </mat-card-content>
+
+        </div>
+
+
+
+
+        <!-- <mat-card-actions fxLayout="row" fxLayoutAlign="end">
+          <button mat-icon-button class="custom-icon-button" (click)="addToCart(item)" >
+            
+            <mat-icon>shopping_cart</mat-icon>
+          </button>
+        </mat-card-actions> -->
+
+
+
+
+      </mat-card>
+
+</section>

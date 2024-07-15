@@ -1,0 +1,107 @@
+<section fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="50px">
+
+  <section class="cartsekcija" fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="10px">
+    <div class="cart-table">
+      <table mat-table [dataSource]="clothesSource" matSort class="custom-table">
+        
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> </th>
+          <td mat-cell *matCellDef="let element"> {{ element.id }} </td>
+        </ng-container>
+
+
+        <ng-container matColumnDef="picture">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Picture </th>
+          <td mat-cell *matCellDef="let element"><a [routerLink]="['/clothesdetails', element.id]"><img class="img-size" mat-card-image [src]="'assets/images/' + element.picture" alt="Photo of a Shiba Inu"></a></td>
+        </ng-container>
+
+
+        <ng-container matColumnDef="manufacturer">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Manufacturer </th>
+          <td mat-cell *matCellDef="let element"> {{ element.manufacturer }} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="price">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Price </th>
+          <td mat-cell *matCellDef="let element"> {{ element.price }} RSD </td>
+        </ng-container>
+
+
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+          <td mat-cell *matCellDef="let element"> {{ element.name }} </td>
+        </ng-container>
+
+
+        <ng-container matColumnDef="size">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Size </th>
+          <td mat-cell *matCellDef="let element"> {{ element.size }} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="amount">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Amount </th>
+          <td mat-cell *matCellDef="let element" fxLayout="row" fxLayoutAlign="center center">
+            <div class="decinc" fxLayout="row" fxLayoutAlign="center center">
+              <button mat-raised-button class="custom-icon-button1" (click)="increaseAmount(element)">
+                +
+              </button>
+              <p class="kolicina">
+              {{element.amount}}
+              </p>
+              <button mat-raised-button class="custom-icon-button2" (click)="decreaseAmount(element)">
+                -
+              </button>
+            </div>
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="itemtotalamount">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Total Price</th>
+          <td mat-cell *matCellDef="let element"> {{ element.newPrice }} RSD </td>
+        </ng-container>
+
+        <ng-container matColumnDef="removeFromCart">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Remove item from cart</th>
+          <td mat-cell *matCellDef="let element">
+            <button mat-raised-button class="custom-icon-button3" (click)="removeFromCart(element)" title="Remove item">
+              <mat-icon>remove_shopping_cart</mat-icon>
+            </button>
+          </td>
+        </ng-container>
+
+        
+        
+  
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      
+      </table>
+      <mat-paginator [pageSize]="10" [pageSizeOptions]="[3, 6, 9, 12]"></mat-paginator>
+    </div>
+    
+  </section>
+
+
+  <section class="drsekcija">
+    <div class="cart2-table">
+      <table mat-table [dataSource]="something" matSort class="custom-table">
+        <ng-container matColumnDef="test">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Total Amount </th>
+          <td mat-cell *matCellDef="let element"> 
+            {{ totalAmount }} RSD
+          </td>
+        </ng-container>
+    
+        <tr mat-header-row *matHeaderRowDef="displayedColumns2"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns2;"></tr>
+      </table>
+
+      <button mat-raised-button class="custom-icon-button4" [disabled]="isCartEmpty()" (click)="showOrderConfirmation()">
+        <span>Order</span><mat-icon>forward</mat-icon>
+      </button>
+    </div>
+
+  </section>
+
+
+</section>

@@ -1,0 +1,9 @@
+<section class="welcome-sekcija" fxLayout fxLayoutAlign="center center" fxLayoutGap="80px">
+    <div class="slider-container">
+      <div class="slider-item" *ngFor="let image of images; let i = index" [ngClass]="{'active': i === currentSlide}" fxLayoutAlign = "center center">
+        <img [src]="image.imgSrc" [alt]="image.imgAlt" class="slider-img">
+      </div>
+      <button class="prev" (click)="prevSlide()">&#10094;</button>
+      <button class="next" (click)="nextSlide()">&#10095;</button>
+    </div>
+</section> 

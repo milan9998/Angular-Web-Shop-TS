@@ -1,0 +1,69 @@
+.custom-icon-button2 {
+    background-color: rgb(240, 153, 153);
+    border: none;
+    cursor: pointer;
+    outline: none;
+    color: rgb(0, 0, 0);
+    margin-top: 45%;
+  }
+  .custom-icon-button2:last-child{
+    margin-left: 20px;
+  }
+  
+  .custom-icon-button2:hover {
+    background-color: rgb(243, 189, 189);
+  }
+
+  .custom-icon-button1{
+    color: yellow;
+  }
+  .custom-icon-button1{
+    background-color: rgb(174, 241, 119);
+    border: none;
+    cursor: pointer;
+    outline: none;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    margin-top: 45%;
+  }
+  .custom-icon-button3{
+    background-color: rgb(255, 42, 42);
+    border: none;
+    cursor: pointer;
+    outline: none;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    margin-left: 45px;
+  }
+  .cart-table{
+    margin-left: 10px;
+    margin-top: 3%;
+  }
+.cartsekcija{
+  margin-left: 90px;
+}
+
+.drsekcija{
+  margin-top: 3%;
+}
+
+
+.cs{
+    width: 20%;
+}
+  
+
+.img-size{
+  width: 240px;
+  height: 280px;
+}
+
+.kolicina{
+  margin-top: 50%;
+  /* margin-top: 87px; */
+  padding-left: 15px;
+
+}
+.decinc{
+  margin-top: 50px;
+}

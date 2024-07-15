@@ -1,0 +1,46 @@
+.detaljiOdece{
+  color: black;
+}
+.kartica{
+  margin-top: 6%;
+  width: 900px;
+  height: 600px;
+  background-color: rgb(255, 255, 255);
+}
+.slika{
+  padding-left: 25px;
+  padding-top: 25px;
+}
+img{
+  margin-bottom: 20px;
+  width: 300px;
+  height: 350px;
+}
+.item-size{
+  padding-left: 8%;
+  font-size: 20px;
+}
+mat-card-title{
+  font-size: 45px;
+}
+.item-type{
+  padding-left: 7px;
+  padding-top: 5px;
+  font-size: 18px;
+}
+.info-proizvod2{
+  margin-top: 5%;
+  padding-left: 50px;
+}
+.opis-proizvoda{
+  display: block;
+  margin-right: 10px;
+  padding-top: 40px;
+  font-size: 17px;
+}
+.cena{
+  margin-top: 80px;
+  font-weight: bold;
+  font-size: 30px;
+
+}
